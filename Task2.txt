@@ -1,0 +1,33 @@
+OBJECTS AND ITS INTERNAL REPRESENTATIONS IN JAVASCRIPT:
+
+In JavaScript, objects are fundamental data structures that allow for the creation of complex data types. 
+They are collections of key-value pairs where each key is a string (or a Symbol) and each value can be of any data type, including other objects, functions, arrays, primitives, etc.
+The internal representation of objects in JavaScript typically involves the use of hash tables or similar data structures. 
+When you create an object, JavaScript engines allocate memory to store its properties and methods. 
+Each property name (key) is hashed to efficiently locate the corresponding value in memory.
+Internally, JavaScript engines optimize object access and manipulation for performance. For instance, modern engines may use various techniques like inline caching, hidden classes, and dictionary mode to speed up property access and improve memory usage.
+
+Here's a brief overview of some key aspects of objects in JavaScript:
+
+1.	Properties: 
+     These are the key-value pairs within an object. Properties can be added, modified, or deleted dynamically.
+
+2.	Methods: 
+     Functions defined as properties of an object are referred to as methods. 
+     These functions can operate on the object's data or perform other tasks.
+
+3.	Prototype Chain: 
+     Objects in JavaScript can inherit properties and methods from other objects via a prototype chain. 
+     This mechanism allows for behavior delegation and supports the concept of object-oriented programming in JavaScript.
+
+4.	Property Descriptors: 
+     Each property of an object is associated with a property descriptor, which defines attributes such as whether the property is writable, enumerable, or configurable.
+
+5.	Constructors and Classes: 
+     JavaScript provides constructor functions and classes for creating objects with a predefined structure and behavior. 
+     These serve as blueprints for creating multiple similar objects.
+
+6.	JSON (JavaScript Object Notation): 
+     Objects in JavaScript can be serialized into JSON format, which is widely used for data interchange between applications.
+
+Understanding the internal representation of objects in JavaScript is crucial for writing efficient code and optimizing performance, especially when dealing with large-scale applications or performance-sensitive tasks.

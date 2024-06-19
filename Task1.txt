@@ -1,0 +1,37 @@
+Differene between HTTP1.1 and HTTP2:
+
+HTTP/1.1 and HTTP/2 are both protocols used for communication between web clients (such as browsers) and web servers. 
+However, they have significant differences in terms of performance, features, and how they handle communication.
+
+1.	Multiplexing:
+     HTTP/1.1 relies on multiple connections to fetch resources in parallel. 
+     This leads to problems like head-of-line blocking, where a slow-loading resource can block other resources from loading. 
+     HTTP/2, on the other hand, supports multiplexing within a single connection. 
+     It allows multiple requests and responses to be sent and received in parallel over the same connection, thus improving efficiency and reducing latency.
+
+2.	Header Compression:
+     HTTP/1.1 headers are sent as plaintext, which can result in significant overhead, especially for requests with many small resources. 
+     HTTP/2 compresses headers, reducing the amount of data transmitted and improving performance.
+
+3.	Server Push:
+     HTTP/2 introduces the concept of server push, where the server can proactively send resources to the client before they are explicitly requested. 
+     This can reduce the number of round trips required to load a page, improving performance.
+
+4.	Binary Protocol:
+     While HTTP/1.1 is a text-based protocol, HTTP/2 is a binary protocol. 
+     Binary protocols are more efficient to parse and can be more compact than text-based protocols, resulting in better performance.
+
+5.	Stream Prioritization:
+     HTTP/2 allows for stream prioritization, where clients can assign priority to different resources. 
+     This helps in optimizing the loading of critical resources first, improving overall page load times.
+
+6.	Connection Handling:
+     HTTP/1.1 requires opening multiple connections for parallel downloads, which can lead to increased overhead due to connection setup and teardown. 
+     HTTP/2 maintains a single connection per origin, reducing the overhead associated with connection management.
+
+7.	Backward Compatibility:
+     HTTP/2 is designed to be fully backward compatible with HTTP/1.1. 
+     This means that even if a client or server only supports HTTP/1.1, communication can still occur, although without the performance benefits of HTTP/2 features like multiplexing and header compression.
+
+Overall, HTTP/2 offers significant performance improvements over HTTP/1.1, especially in scenarios where multiple resources need to be fetched to load a web page. 
+However, adoption of HTTP/2 may require updates to both client and server software.
